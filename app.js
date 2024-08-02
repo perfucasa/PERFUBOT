@@ -51,7 +51,9 @@ const flowReclamos = addKeyword(EVENTS.ACTION)
                     'Una vez tengamos todos estos datos deberás esperar a que un asesor te contacte para ver como seguir el caso 😁',
                     '',
                     'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                ]);
+                ],{
+                    delay: 4000,
+                });
             case "2":
                 return await flowDynamic([
                     'Si recibiste tu paquete con menos productos de los que compraste necesitaría los siguientes datos: ',
@@ -62,7 +64,9 @@ const flowReclamos = addKeyword(EVENTS.ACTION)
                     'Una vez tengamos todos estos datos deberás esperar a que un asesor te contacte para ver como seguir el caso 😁',
                     '',
                     'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                ]);
+                ],{
+                    delay: 4000,
+                });
             case "3": 
                 return await flowDynamic([
                     'Si recibiste un producto distinto al que compraste necesitaría los siguientes datos: ',
@@ -74,7 +78,9 @@ const flowReclamos = addKeyword(EVENTS.ACTION)
                     'Una vez tengamos todos estos datos deberás esperar a que un asesor te contacte para ver como seguir el caso 😁',
                     '',
                     'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                ]);
+                ],{
+                    delay: 4000,
+                });
             case "4": 
                 return await flowDynamic([
                     'Si te arrepentiste de la compra y querés devolver el producto, recordá que: ',
@@ -84,7 +90,9 @@ const flowReclamos = addKeyword(EVENTS.ACTION)
                     '- El envío corre por cuenta del comprador',
                     '',
                     'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                ]);
+                ],{
+                    delay: 4000,
+                });
             case "0":
                 return gotoFlow(menuFlow);
             case "Salir":
@@ -127,49 +135,63 @@ const flowPrecios = addKeyword(EVENTS.ACTION)
                             'https://www.perfucasa.com/unas/',
                             '',
                             'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                        ]);
+                        ],{
+                            delay: 3000,
+                        });
                     case "2":
                         return await flowDynamic([
                             'Te dejo todos nuestros productos disponibles de la categoría *CUIDADO PERSONAL & BELLEZA*: ',
                             'https://www.perfucasa.com/belleza/',
                             '',
                             'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                        ]);
+                        ],{
+                            delay: 3000,
+                        });
                     case "3": 
                         return await flowDynamic([
                             'Te dejo todos nuestros productos disponibles de la categoría *AROMATIZACIÓN*: ',
                             'https://www.perfucasa.com/aromatizacion/',
                             '',
                             'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                        ]);
+                        ],{
+                            delay: 3000,
+                        });
                     case "4": 
                         return await flowDynamic([
                             'Te dejo todos nuestros productos disponibles de la categoría *ELECTRÓNICA*: ',
                             'https://www.perfucasa.com/electronica/',
                             '',
                             'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                        ]);
+                        ],{
+                            delay: 3000,
+                        });
                     case "5": 
                         return await flowDynamic([
                             'Te dejo todos nuestros productos disponibles de la categoría *ILUMINACIÓN*: ',
                             'https://www.perfucasa.com/iluminacion/',
                             '',
                             'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                        ]);
+                        ],{
+                            delay: 3000,
+                        });
                     case "6": 
                         return await flowDynamic([
                             'Te dejo todos nuestros productos disponibles de la categoría *HOGAR*: ',
                             'https://www.perfucasa.com/hogar/',
                             '',
                             'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                        ]);
+                        ],{
+                            delay: 3000,
+                        });
                     case "7": 
                         return await flowDynamic([
                             'Te dejo todos nuestros productos disponibles de la categoría *REGALERÍA*: ',
                             'https://www.perfucasa.com/regaleria/',
                             '',
                             'Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!'
-                        ]);
+                        ],{
+                            delay: 3000,
+                        });
                     case "0":
                         return gotoFlow(menuFlow);
                     case "Salir":
@@ -185,8 +207,12 @@ const flowContactar = addKeyword(EVENTS.ACTION)
         '*HORARIOS DE ATENCIÓN* de 11 a 19hs 🙏',
         'Si necesitas comunicarte con uno de nuestros asesores podes llamar a cualquiera de los siguientes números:',
         '+54 9 11 3170-2270 o +54 9 11 2670-2222'
-    ])
-    .addAnswer('Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!')
+    ],{
+        delay: 4000,
+    })
+    .addAnswer('Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!',{
+        delay: 2000,
+    })
 
 const flowRedes = addKeyword(EVENTS.ACTION)
     .addAnswer([
@@ -197,12 +223,20 @@ const flowRedes = addKeyword(EVENTS.ACTION)
         '*Youtube*: https://youtube.com/perfucasa',
         '*TikTok*: https://www.tiktok.com/@perfucasalocal',
         '*Whatsapp*: +54 9 11 3170-2270 o +54 9 11 2670-2222'
-    ])
-    .addAnswer('Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!')
+    ],{
+        delay: 4000,
+    })
+    .addAnswer('Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!',{
+        delay: 2000,
+    })
 
 const flowDireccion = addKeyword(EVENTS.ACTION)
-    .addAnswer(['📍 Estamos en Av. Cabildo 2431, Belgrano, CABA. De lunes a sábados de 11 a 19hs.'])
-    .addAnswer('Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!')
+    .addAnswer('📍 Estamos en Av. Cabildo 2431, Belgrano, CABA. De lunes a sábados de 11 a 19hs.',{
+        delay: 2000,
+    })
+    .addAnswer('Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!',{
+        delay: 2000,
+    })
 
 const flowPreguntas = addKeyword(EVENTS.ACTION)
     .addAnswer([
@@ -225,17 +259,23 @@ const flowPreguntas = addKeyword(EVENTS.ACTION)
         '',
         '*¿Cómo puedo pagar mis compras?*',
         'Aceptamos diferentes formas de pago, como tarjetas de crédito y débito, transferencias bancarias y pagos en efectivo. En el momento de la compra, podrás seleccionar la forma de pago que mejor te convenga.'
-    ])
-    .addAnswer('Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!')
+    ],{
+        delay: 6000,
+    })
+    .addAnswer('Si necesitas más ayuda podes volver al menú digitando *MENU* ¡Saludos!',{
+        delay: 2000,
+    })
 
 /* EVENTS.WELCOME por opciones menu , 'menu' */
 
 const flowVoice = addKeyword(EVENTS.VOICE_NOTE)
-    .addAnswer("Lo sentimos, por el momento no podemos escuchar audios😔. Si necesitas consultar algo, digitá *MENU*");
+    .addAnswer("Lo sentimos, por el momento no podemos escuchar audios😔. Si necesitas consultar algo, digitá *MENU*",{
+        delay: 2000,
+    });
 
 const menuFlow = addKeyword(['menu', 'menú', 'hola', 'holis', 'buenas', 'buenos', 'hello', 'ola', 'alo'])
     .addAnswer('🙌 ¡Hola! Estás hablando con *PERFUCASA*. ¿En qué podemos ayudarte? ',{
-        delay: 1500,
+        delay: 8000,
     })
     .addAnswer(
         menu,
