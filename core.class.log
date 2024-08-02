@@ -1,0 +1,40 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5491141787678@s.whatsapp.net',
+    fromMe: false,
+    id: '3AF25E8297C0724923E2',
+    participant: undefined
+  },
+  messageTimestamp: 1722613682,
+  pushName: 'Rodrigo Miranda',
+  broadcast: false,
+  message: Message {
+    conversation: '0',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '0',
+  from: '5491141787678'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5491141787678@s.whatsapp.net',
+    fromMe: false,
+    id: '3AD142A1429689254709',
+    participant: undefined
+  },
+  messageTimestamp: 1722613692,
+  pushName: 'Rodrigo Miranda',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '5491141787678'
+}
